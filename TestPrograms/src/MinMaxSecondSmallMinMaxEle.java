@@ -1,4 +1,4 @@
-public class SecondSmallestMinMaxEle {
+public class MinMaxSecondSmallMinMaxEle {
     public static void main(String[] args){
         int[] arr={5,6,7,8,2,1};
 
@@ -11,18 +11,16 @@ public class SecondSmallestMinMaxEle {
                 max=num;
             }
 
-            if(num<min){
-                secondMin=min;
-                min=num;
-            }else if(num>min&&num<secondMin){
-                secondMin=num;
-            }
+        if(num<min){
+            secondMin=min;
+            min=num;
+        }else if(num>min&&num<secondMin){
+            secondMin=num;
         }
+    }
         System.out.println("Min: "+min);
         System.out.println("Max: "+max);
         System.out.println("2nd Small: "+secondMin);
-
     }
-
 
 }
