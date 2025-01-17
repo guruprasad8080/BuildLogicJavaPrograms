@@ -27,9 +27,9 @@ public class AddTwoFractions {
             num=arr1[0]*arr2[1]+arr1[1]*arr2[0];
             den=arr1[1]*arr2[1];
         }
-//        int temp=gcd(num,den);
-//        int n1=num/temp;
-//        int d1=den/temp;
+        int temp=gcd(num,den);
+        int n1=num/temp;
+        int d1=den/temp;
         System.out.println("Result:- "+num+"/"+den);
     }
 

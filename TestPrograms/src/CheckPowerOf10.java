@@ -1,7 +1,7 @@
 public class CheckPowerOf10 {
 
      public static void main(String[] args){
-         long num=1000;
+         long num=100;
          boolean val=check(num);
          if(val){
              System.out.println("Yes");
@@ -13,12 +13,13 @@ public class CheckPowerOf10 {
      private static boolean check(long num){
          if(num==1) {
              return true;
-         }else if(num<10) {
-             return false;
-         }else if(num%10==0){
-             return check(num/10);
-         }else{
-             return false;
          }
+         while(num>1){
+             if(num%10!=0){
+                 return false;
+             }
+             num/=10;
+         }
+         return true;
      }
 }

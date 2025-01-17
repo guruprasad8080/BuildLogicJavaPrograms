@@ -1,6 +1,6 @@
 import java.util.LinkedHashMap;
 
-public class LongestUniformSubstring {
+public class LongestUniqueSubstring {
 
     public static void main(String[] args){
         String str="aaaabbbnokkkpppppp";
