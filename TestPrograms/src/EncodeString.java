@@ -6,24 +6,19 @@ import java.util.Set;
 public class EncodeString {
 
     public static String encodeString(String input) {
-        HashMap<String, Integer> substringCount = new HashMap<>();
-        StringBuilder encodedString = new StringBuilder();
+        int len=input.length();
+        for(int i=1;i<=len/2;i++){
+            String substring=input.substring(0,i);
+            StringBuilder repPattern=new StringBuilder();
+             while(repPattern.length()<len){
+                 repPattern.append(substring);
+             }
 
-        for (int i = 0; i < input.length(); i++) {
-            String currentSubstring = input.substring(0, i + 1);
-
-            // Increment count in the map
-            substringCount.put(currentSubstring, substringCount.getOrDefault(currentSubstring, 0) + 1);
-
-            // If substring already exists, replace with '*'
-            if (substringCount.get(currentSubstring) > 1) {
-                encodedString.append("*");
-            } else {
-                encodedString.append(input.charAt(i));
-            }
+             if(repPattern.substring(0,len).equals(input)){
+                 return substring+"*"+input.charAt(len-1);
+             }
         }
-
-        return encodedString.toString();
+        return input;
     }
 
     public static void main(String[] args) {
