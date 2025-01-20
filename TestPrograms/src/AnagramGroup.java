@@ -7,10 +7,10 @@ public class AnagramGroup {
         Set<Set<String>> set=checkAnagramgroup(arrList);
         System.out.println(set);
 
-        Map<String,List<String>> groupAnagaram=arrList.stream()
+        Map<String,List<String>> groupAnagram=arrList.stream()
                 .collect(Collectors.groupingBy(AnagramGroup::sortedStr));
 
-        groupAnagaram.forEach((key,value)->System.out.println(value));
+        groupAnagram.forEach((key,value)->System.out.println(value));
     }
 
     private static Set<Set<String>> checkAnagramgroup(List<String> words ){

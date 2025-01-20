@@ -1,7 +1,7 @@
 public class JosephusProblem {
 
     public static void main(String[] args){
-        int n=4;
+        int n=100;
         int k=2;
 
         int position=josephus(n,k);
