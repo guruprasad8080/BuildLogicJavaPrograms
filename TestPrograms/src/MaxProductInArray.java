@@ -16,7 +16,8 @@ public class MaxProductInArray {
         for(int i=0;i<n;i++){
             maxProduct2*=arr[i];
         }
-
+        System.out.println(maxProduct1);
+        System.out.println(maxProduct2);
         System.out.println("Result: "+ Math.max(maxProduct1,maxProduct2));
     }
 }

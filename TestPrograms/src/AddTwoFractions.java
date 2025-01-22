@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/* Adding fractions Program will be simple Math
+*  ex: F1: 2/5 = 2*7/5*7 = 14/35
+*      F2: 3/7 = 3*5/7*5 = 15/35
+*      14/35 + 15/35 = 29/35
+*      Ans: 29/35
+* */
+
 public class AddTwoFractions {
     public static void main(String[] args){
         Scanner s=new Scanner(System.in);

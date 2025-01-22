@@ -1,5 +1,11 @@
 public class JosephusProblem {
-
+    /*The Josephus Problem is a theoretical puzzle related,
+     to a group of people standing in a circle and being eliminated in a specific order until only one remains.
+     It has historical origins and practical applications in computer science and game theory.
+     Given:
+          n: Number of people standing in a circle.
+          k: Step count for elimination (every k-th person is removed).
+    * */
     public static void main(String[] args){
         int n=100;
         int k=2;

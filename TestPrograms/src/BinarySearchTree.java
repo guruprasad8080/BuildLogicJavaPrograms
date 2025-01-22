@@ -1,3 +1,27 @@
+/* Binary Search Tree
+*  Left Subtree: All values in the left subtree are smaller than the root node.
+*  Right Subtree: All values in the right subtree are greater than the root node.
+*  No Duplicates: Each value appears only once in the tree.
+*  1.Insert:
+To insert a value into a BST:
+Start at the root.
+If the value is smaller than the current node, go to the left subtree.
+If the value is larger, go to the right subtree.
+Repeat until you find an empty spot, and insert the value there.
+*  2.Preorder Traversal:
+Preorder traversal visits nodes in this order:
+Visit the current node (root).
+Traverse the left subtree.
+Traverse the right subtree.
+*  3. Search:
+To search for a value in a BST:
+Start at the root.
+Compare the value with the current node:
+If the value equals the current node, the search is successful.
+If the value is smaller, search in the left subtree.
+If the value is larger, search in the right subtree.
+Repeat until you find the value or reach a null node (not found)
+* */
 public class BinarySearchTree {
     BSTNode root;
 

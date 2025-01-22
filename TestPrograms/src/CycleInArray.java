@@ -1,5 +1,13 @@
 public class CycleInArray {
 
+    /*A cycle in an array refers to a sequence of elements in the array,
+    where you repeatedly move to the next index as determined by the value at the current index.
+    Eventually, you return to a previously visited index, forming a loop or cycle.
+    *Ex: Starting from index i, jump forward or backward by the value at arr[i]
+    *    If the array allows you to loop back to an earlier index, a cycle is formed.
+    * Algorithm : Tortoise and Hare used.
+    * */
+
     public static void main(String[] args){
         int[] arr={1,2,1,2,5};
         int startIndex=0;

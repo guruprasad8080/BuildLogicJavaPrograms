@@ -1,4 +1,9 @@
 public class ArrayDuplicateElements {
+
+    /*Sorted Array with removing duplicate changing the index.
+    * O(1)->Space Complexity
+    * O(n)-> Time complexity
+    * */
     public static void main(String[] args) {
 
         int arr[] = { 1, 2, 2,3, 4, 4, 4, 5, 5 };
