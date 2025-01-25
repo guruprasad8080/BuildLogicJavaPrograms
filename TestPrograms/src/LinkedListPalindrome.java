@@ -1,4 +1,11 @@
 public class LinkedListPalindrome {
+
+/*Explained below:
+    1.Find the Middle of the Linked List: Use the fast and slow pointer technique to find the midpoint.
+    2.Reverse the Second Half: Reverse the second half of the list from the midpoint.
+    3.Compare Both Halves: Compare the first half and the reversed second half to check for palindrome properties.
+    4.Restore the List (Optional): Reverse the second half back to its original order if needed.
+* */
     public static void main(String[] args){
         ListNode head=new ListNode(1);
         head.next=new ListNode(2);

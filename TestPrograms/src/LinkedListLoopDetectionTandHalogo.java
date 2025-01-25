@@ -1,4 +1,13 @@
 public class LinkedListLoopDetectionTandHalogo {
+
+    /*
+    *Floyd's Cycle Detection Algorithm (also called the "Tortoise and Hare" approach). Here's how it works:
+    1.Use two pointers (slow and fast) to traverse the linked list.
+    2.Move the slow pointer one step at a time, and the fast pointer two steps at a time.
+    3.If there is a loop in the linked list, the slow and fast pointers will eventually meet.
+    4.If the fast pointer reaches the end (null), the linked list does not contain a loop
+    * */
+
     public static void main(String[] args){
 
         Node head=new Node(1);

@@ -1,4 +1,9 @@
 public class LengthEncodingString {
+
+    /*Encoding String followed by count of that character repeated .
+    * Ex: input : aaabbccddeeaa
+    *     output: a3b2c2d2e2a2
+    * */
     public static void main(String[] args){
         String str="aaabbccddeeaa";
         StringBuilder sb=new StringBuilder();

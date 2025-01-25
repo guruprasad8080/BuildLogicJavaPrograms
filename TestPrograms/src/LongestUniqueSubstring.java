@@ -2,6 +2,10 @@ import java.util.LinkedHashMap;
 
 public class LongestUniqueSubstring {
 
+    /*Find longest unique substring given string
+    Ex: input: aaaabbbnokkkpppppp
+        output: [b, n, o, k]
+    * */
     public static void main(String[] args){
         String str="aaaabbbnokkkpppppp";
         char[] charArr=str.toCharArray();

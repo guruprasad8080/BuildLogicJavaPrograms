@@ -1,5 +1,9 @@
 public class LongestUniformSubString {
 
+    /*Find longest consecutive uniform substring given string
+    Ex: input: aaaaaabbcccddddddee
+        output: aaaaaa
+    * */
     public static void main(String[] args) {
         String input = "aaaaaabbcccddddddee";
         String result = findLongestUniformSubstring(input);
