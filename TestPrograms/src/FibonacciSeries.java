@@ -11,7 +11,7 @@ public class FibonacciSeries {
         int prev1=1,prev2=0;
         int current=0;
         for(int i=2;i<n;i++){
-          //  System.out.println(""+prev2); line is to print the fibo series
+            System.out.println(""+prev2); //line is to print the fibo series
             current=prev2+prev1;
             prev2=prev1;
             prev1=current;

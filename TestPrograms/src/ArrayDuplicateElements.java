@@ -6,7 +6,7 @@ public class ArrayDuplicateElements {
     * */
     public static void main(String[] args) {
 
-        int arr[] = { 1, 2, 2,3, 4, 4, 4, 5, 5 };
+        int[] arr = { 1, 2, 2, 3, 4, 4, 4, 5, 5 };
         int n = arr.length;
 
         n = removeDuplicates(arr, n);
@@ -16,7 +16,7 @@ public class ArrayDuplicateElements {
         }
     }
 
-    public static int removeDuplicates(int arr[], int n) {
+    public static int removeDuplicates(int[] arr, int n) {
 
         int uniqueIndx = 0;
         for (int i = 1; i < n; i++) {

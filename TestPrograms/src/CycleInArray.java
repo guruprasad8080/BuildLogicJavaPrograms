@@ -9,7 +9,7 @@ public class CycleInArray {
     * */
 
     public static void main(String[] args){
-        int[] arr={1,2,1,2,5};
+        int[] arr={1,2,3,4,5,3};
         int startIndex=0;
         if(detectCycle(arr,startIndex)){
             System.out.println("Yes");

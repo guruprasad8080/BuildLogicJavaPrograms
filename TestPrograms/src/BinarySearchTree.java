@@ -62,7 +62,7 @@ public class BinarySearchTree {
         return searchBSTRec(root.right,val);
     }
 
-    void inorder(){
+    void inOrder(){
         inorderRec(root);
     }
 
@@ -73,6 +73,32 @@ public class BinarySearchTree {
             inorderRec(root.right);
         }
     }
+
+    void preOrder(){
+        preOrderRec(root);
+    }
+
+    void preOrderRec(BSTNode root){
+        if(root==null){
+            return;
+        }
+        System.out.println(root.val);
+        this.preOrderRec(root.left);
+        this.preOrderRec(root.right);
+    }
+
+    void postOrder(){
+        postOrderRec(root);
+    }
+    void postOrderRec(BSTNode root){
+        if (root==null){
+            return;
+        }
+        this.postOrderRec(root.left);
+        this.postOrderRec(root.right);
+        System.out.println(root.val);
+    }
+
 
     public static void main(String[] args){
          BinarySearchTree bst=new BinarySearchTree();
@@ -85,7 +111,13 @@ public class BinarySearchTree {
         bst.insertNode(80);
 
         System.out.println("In Order Traversal:");
-        bst.inorder();
+        bst.inOrder();
+
+        System.out.println("Pre Order Traversal:");
+        bst.preOrder();
+
+        System.out.println("Post Order Traversal:");
+        bst.postOrder();
 
         int searchVal=40;
         System.out.println("Searching for: "+searchVal);

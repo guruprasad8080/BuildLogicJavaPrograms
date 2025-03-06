@@ -37,7 +37,7 @@ public class AddTwoFractions {
         int temp=gcd(num,den);
         int n1=num/temp;
         int d1=den/temp;
-        System.out.println("Result:- "+num+"/"+den);
+        System.out.println("Result:- "+n1+"/"+d1);
     }
 
     public static int gcd(int num,int den){
