@@ -112,8 +112,8 @@ public class DeQueueImplementation {
         DeNode n4= new DeNode(4);
 
         dqi.insertFirst(n4);
-        dqi.insertLast(n3);
         dqi.insertLast(n2);
+        dqi.insertLast(n3);
         dqi.insertLast(n1);
         dqi.print();
 
