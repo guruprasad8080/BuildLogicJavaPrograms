@@ -14,6 +14,8 @@ public class DeQueueImplementation {
         int data;
         DeNode(int data){
             this.data=data;
+            this.next=null;
+            this.previous=null;
         }
 
     }
