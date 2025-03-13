@@ -11,10 +11,10 @@ public class CanadaToNewYork {
         Integer[][] grid={{0,0,0,0,5},
                           {0,1,1,1,0},
                           {2,0,0,6,0}};
-         maxtStonePath(grid);
+         maxStonePath(grid);
     }
 
-    private static void maxtStonePath(Integer[][] grid) {
+    private static void maxStonePath(Integer[][] grid) {
         int rows = grid.length;
         int cols = grid[0].length;
 
