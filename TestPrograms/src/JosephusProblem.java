@@ -7,8 +7,8 @@ public class JosephusProblem {
           k: Step count for elimination (every k-th person is removed).
     * */
     public static void main(String[] args){
-        int n=100;
-        int k=2;
+        int n=7;
+        int k=3;
 
         int position=josephus(n,k);
         System.out.println("The chosen position is: "+position);
