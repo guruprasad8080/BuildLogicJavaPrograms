@@ -8,9 +8,9 @@ Answer:2+0+1+1+1+0+5=10
 * */
 public class CanadaToNewYork {
     public static void main(String[] args) {
-        Integer[][] grid={{0,0,0,0,5},
+        Integer[][] grid={{10,0,8,0,5},
                           {0,1,1,1,0},
-                          {2,0,0,6,0}};
+                          {2,0,0,12,10}};
          maxStonePath(grid);
     }
 
@@ -27,12 +27,15 @@ public class CanadaToNewYork {
         // Fill the DP table
         for (int i = rows - 1; i >= 0; i--) {
             for (int j = 0; j < cols; j++) {
-                // Get max stones from the left and bottom cells
-                int fromRight = (j > 0) ? dp[i][j - 1] : 0;
-                int fromBottom = (i < rows - 1) ? dp[i + 1][j] : 0;
-
-                // Update the current cell with max possible stones
-                dp[i][j] = Math.max(fromRight, fromBottom) + grid[i][j];
+                if(j!=0&&i==rows-1){
+                    dp[i][j]=dp[i][j-1]+grid[i][j];
+                } else if (j==0&&i!=rows-1) {
+                    dp[i][j]=dp[i+1][j]+grid[i][j];
+                } else if (j!=0&&i!=rows-1) {
+                    dp[i][j]=Math.max(dp[i+1][j],dp[i][j-1])+grid[i][j];
+                }else{
+                    dp[i][j]=grid[i][j];
+                }
             }
         }
         // The answer is in the top-right corner
