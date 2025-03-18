@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class AnagramGroup {
     public static void main(String[] args){
         List<String> arrList= Arrays.asList("cat","ot","dog","god","to");
-        Set<Set<String>> set=checkAnagramgroup(arrList);
+        Set<Set<String>> set=checkAnagramGroup(arrList);
         System.out.println(set);
 
         // Using Java 8 feature
@@ -18,7 +18,7 @@ public class AnagramGroup {
     }
 
     // Using normal Set
-    private static Set<Set<String>> checkAnagramgroup(List<String> words ){
+    private static Set<Set<String>> checkAnagramGroup(List<String> words ){
         Map<String,Set<String>> map=new HashMap<>();
         for(String word:words){
             char[] charArray=word.toCharArray();
