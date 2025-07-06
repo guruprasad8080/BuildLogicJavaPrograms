@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 /*
 * Product of Array Except Self
-* Given an integer array arr, return an array arr such that arr[i] is equal to the product of all the elements of arr except arr[i].
+* Given an integer array arr, return an array arr such that arr[i] is equal to the product of all the elements of
+* arr except arr[i].
 
 The product of any prefix or suffix of arr is guaranteed to fit in a 32-bit integer.
 
