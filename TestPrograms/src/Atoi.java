@@ -61,6 +61,6 @@ public class Atoi {
             i++;
         }
 
-        return (int) result;
+        return (int) (sign*result);
     }
 }
