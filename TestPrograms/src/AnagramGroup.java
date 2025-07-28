@@ -17,6 +17,12 @@ public class AnagramGroup {
         groupAnagram.forEach((key,value)->System.out.println(value));
     }
 
+    private static String sortedStr(String str){
+        char[] charArray=str.toCharArray();
+        Arrays.sort(charArray);
+        return new String(charArray);
+    }
+
     // Using normal Set
     private static Set<Set<String>> checkAnagramGroup(List<String> words ){
         Map<String,Set<String>> map=new HashMap<>();
@@ -29,9 +35,5 @@ public class AnagramGroup {
         return new HashSet<>(map.values());
     }
 
-    private static String sortedStr(String str){
-        char[] charArray=str.toCharArray();
-        Arrays.sort(charArray);
-        return new String(charArray);
-    }
+
 }
