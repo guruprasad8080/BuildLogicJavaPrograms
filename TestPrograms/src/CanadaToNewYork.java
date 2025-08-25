@@ -1,5 +1,5 @@
 /*Problem Statement:
-Travelling from Canada to New York  there are stones in between to collect, collect the maximum number of stones .
+Traveling from Canada to New York, there are stones in between to collect, collect the maximum number of stones .
 note: you can only move north(up) or/and east(right).
 Ex: Integer grid[][]={{0,0,0,0,5},
                       {0,1,1,1,0},
