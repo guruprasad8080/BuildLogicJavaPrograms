@@ -12,7 +12,7 @@ Output: [0, 1] (because 2 + 7 = 9)
 public class TwoSumProblem {
 
     public static void main(String[] args) {
-        int[] nums={2,5,11,15};
+        int[] nums={2,7,11,15};
         int target= 9;
         int[] result=twoSum(nums,target);
         System.out.println(Arrays.toString(result));
