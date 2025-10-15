@@ -35,7 +35,6 @@ public class MoveZeroToEnd {
                 left++;  //to move the pointer forward.
             }
         }
-
-
+        System.out.println(Arrays.toString(arr));
     }
 }
