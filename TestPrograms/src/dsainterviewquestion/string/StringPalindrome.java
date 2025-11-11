@@ -1,4 +1,4 @@
-package dsainterviewquestion150.string;
+package dsainterviewquestion.string;
 
 public class StringPalindrome {
     public static void main(String[] args) {

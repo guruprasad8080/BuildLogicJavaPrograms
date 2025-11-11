@@ -1,4 +1,4 @@
-package dsainterviewquestion150.string;
+package dsainterviewquestion.string;
 
 public class FindFirstNonRepeatingCharString {
     public static void main(String[] args) {

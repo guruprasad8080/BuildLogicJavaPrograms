@@ -1,4 +1,4 @@
-package dsainterviewquestion150.array;
+package dsainterviewquestion.array;
 
 public class FindTheMissingNumber {
     public static void main(String[] args) {
