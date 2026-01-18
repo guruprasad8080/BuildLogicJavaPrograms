@@ -1,5 +1,8 @@
 package dsainterviewquestion.string;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class FindFirstNonRepeatingCharString {
     public static void main(String[] args) {
         String str = "swiss";
@@ -32,11 +35,11 @@ public class FindFirstNonRepeatingCharString {
     }
 
     public static void firstNonRepeatingCharUsingLinkedHashMap(String str) {
-        java.util.Map<Character, Integer> charMap = new java.util.LinkedHashMap<>();
+        Map<Character, Integer> charMap = new LinkedHashMap<>();
         for (char c : str.toCharArray()) {
             charMap.put(c, charMap.getOrDefault(c, 0) + 1);
         }
-        for (java.util.Map.Entry<Character, Integer> entry : charMap.entrySet()) {
+        for (Map.Entry<Character, Integer> entry : charMap.entrySet()) {
             if (entry.getValue() == 1) {
                 System.out.println("Value:- "+entry.getKey());
                 break;
