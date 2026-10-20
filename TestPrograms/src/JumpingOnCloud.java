@@ -12,6 +12,6 @@ public class JumpingOnCloud {
             jumps++;
         }
 
-        System.out.println("Minimum Jumps"+jumps);
+        System.out.println("Minimum Jumps : "+jumps);
     }
 }

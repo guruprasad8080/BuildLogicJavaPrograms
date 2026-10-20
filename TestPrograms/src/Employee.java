@@ -18,7 +18,8 @@ public class Employee {
         return this.empId==emp.empId && this.empName==emp.empName;
     }
 
-    Employee(String empName,Double salary,String department){
+    Employee(Integer empId,String empName,Double salary,String department){
+        this.empId=empId;
         this.empName=empName;
         this.salary=salary;
         this.department=department;
@@ -53,5 +54,10 @@ public class Employee {
     }
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    @Override
+    public String toString() {
+        return "Id: " + empId + ", Name: " + empName + ", Salary: " + salary + ", Department: " + department;
     }
 }

@@ -1,7 +1,7 @@
 public class ConvertStringToInteger {
     public static void main(String[] args) {
         System.out.println(31==checkStrToInt("31"));
-        System.out.println(131==checkStrToInt("131"));
+        System.out.println(-131==checkStrToInt("-131"));
     }
 
     public static int checkStrToInt(String str){

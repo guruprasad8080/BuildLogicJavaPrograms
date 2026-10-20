@@ -29,8 +29,8 @@ public class AnagramGroup {
         for(String word:words){
             char[] charArray=word.toCharArray();
             Arrays.sort(charArray);
-            String sortedWord=new String(charArray);
-            map.computeIfAbsent(sortedWord,k->new HashSet<>()).add(word);
+            String sortedStr=new String(charArray);
+            map.computeIfAbsent(sortedStr,k->new HashSet<>()).add(word);
         }
         return new HashSet<>(map.values());
     }
