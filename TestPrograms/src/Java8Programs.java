@@ -11,13 +11,15 @@ public class Java8Programs {
 
         //2.Count Word Frequency in given String
         String text="Hi Guru Hello Guru is Best Guru is great";
-        Map<String, Long> wordCount=Arrays.stream(text.split(" ")).collect(Collectors.groupingBy(w->w,Collectors.counting()));
+        Map<String, Long> wordCount=Arrays.stream(text.split(" "))
+                .collect(Collectors.groupingBy(w->w,Collectors.counting()));
         System.out.println(wordCount);
 
         //3.Find first non-repeating character
         String str="pappayas";
-        Character result =str.chars().mapToObj(c->(char)c).filter(c->str.indexOf(c)==str.lastIndexOf(c)).
-                                      findFirst().orElse(null);
+        Character result =str.chars().mapToObj(c->(char)c)
+                .filter(c->str.indexOf(c)==str.lastIndexOf(c))
+                        .findFirst().orElse(null);
         System.out.println(result);
 
         //4.Remove duplicates from a list
@@ -37,10 +39,10 @@ public class Java8Programs {
                 new Employee(4, "Sneha", 60000.00,"IT"),
                 new Employee(5, "Vijay", 20000.00,"HR")
         );
-        // employees.sort(Comparator.comparing(Employee::getSalary));
+         employees.sort(Comparator.comparing(Employee::getSalary));
 
         //6.Convert a list of strings to uppercase in java
-        List<String> list=Arrays.asList("Guru","Prasad","Guru","Raj");
+        List<String> list=Arrays.asList("Guru","Prasad","Saritha","Raj");
         list.stream().map(String::toUpperCase).collect(Collectors.toList());
         System.out.println(list);
 
@@ -53,14 +55,15 @@ public class Java8Programs {
         System.out.println(csv);
 
         //9.Convert List<String> to Map<String,Integer>
-        /*Map<String,Integer> map=list.stream().collect(Collectors.toMap(s->s,String::length));
-        System.out.println(map);*/
+        Map<String,Integer> map=list.stream().collect(Collectors.toMap(s->s,String::length));
+        System.out.println(map);
 
         //10.Group the Employees by department Using Collectors.groupingBy()
-        Map<String,List<Employee>> deptGroup=employees.stream().collect(Collectors.groupingBy(Employee::getDepartment));
+        Map<String,List<Employee>> deptGroup=employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment));
 
         //11.Get employee list who earns more than the average salary
-        //calculate avarage salary
+        //calculate average salary
         double average=employees.stream()
                                  .mapToDouble(Employee::getSalary)
                                  .average().orElse(0.0);
@@ -84,5 +87,21 @@ public class Java8Programs {
                                 emp->emp.get().getSalary())));
 
         System.out.println(highEmp);
+
+        //14.Longest word using java 8
+        String sentence="This is stream Problem";
+        String longestWord=Arrays.stream(sentence.split(" "))
+                .max(Comparator.comparingInt(String::length))
+                .orElse("");
+        System.out.println(longestWord);
+
+        //15.Find the highest salary in the list of employee
+        OptionalDouble highestSalary=employees.stream()
+                .mapToDouble(Employee::getSalary)
+                .max();
+        System.out.println(highestSalary);
+
+        //16.
+
     }
 }

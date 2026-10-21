@@ -1,6 +1,6 @@
 public class CharFollowedByNum {
 
-    /*Given String we nee to find the character count and append to that
+    /*Given String we need to find the character count and append to that
     input:aaabbcccaa
     output:a3b2c3a2
     * */
