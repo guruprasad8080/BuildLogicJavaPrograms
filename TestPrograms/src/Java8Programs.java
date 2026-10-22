@@ -61,6 +61,8 @@ public class Java8Programs {
         //10.Group the Employees by department Using Collectors.groupingBy()
         Map<String,List<Employee>> deptGroup=employees.stream()
                 .collect(Collectors.groupingBy(Employee::getDepartment));
+        System.out.println(deptGroup);
+
 
         //11.Get employee list who earns more than the average salary
         //calculate average salary
