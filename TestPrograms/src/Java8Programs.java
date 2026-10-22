@@ -101,7 +101,11 @@ public class Java8Programs {
                 .max();
         System.out.println(highestSalary);
 
-        //16.
+        //16.Number of time words occurs in sentence
+        String sent="This is my Life and this LIfE is good";
+        Map<String,Long> wordCountMap=Arrays.stream(sent.split(" "))
+                .collect(Collectors.groupingBy(String::toUpperCase,Collectors.counting()));
+        System.out.println(wordCountMap);
 
     }
 }
