@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Java8Programs {
     public static void main(String[] args) {
@@ -108,6 +109,32 @@ public class Java8Programs {
         Map<String,Long> wordCountMap=Arrays.stream(sent.split(" "))
                 .collect(Collectors.groupingBy(String::toUpperCase,Collectors.counting()));
         System.out.println(wordCountMap);
+
+        //17.filter the given string array Validate integer
+        String[] strArray = {"123", "abc", "456", "def"};
+        List<Integer> validIntegers = Arrays.stream(strArray)
+                .filter(s -> s.matches("\\d+"))
+                .map(Integer::parseInt)
+                .collect(Collectors.toList());
+        System.out.println(validIntegers);
+
+        //18.Find the unique character in String
+        String nstr="Hello world";
+        Map<Character,Long> smap=nstr.chars()
+                .mapToObj(c->(char)c)
+                .collect(Collectors.groupingBy(c->c,Collectors.counting()));
+        List<Character> uniqueChars=smap.entrySet().stream()
+                .filter(entry->entry.getValue()==1)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+        System.out.println(uniqueChars);
+
+        //19. Reverse the String Alphabet order
+        String alstr="debac";
+        String reverse= Stream.of(alstr.split(""))
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.joining());
+        System.out.println(reverse);
 
     }
 }
