@@ -7,7 +7,7 @@ public class Java8Programs {
 
         //1.Filter Even Number from a list
         List<Integer> numbers= Arrays.asList(2,1,3,4,6,5,7,8,9);
-        List<Integer> even=numbers.stream().filter(n->n%2==0).collect(Collectors.toList());
+        List<Integer> even=numbers.stream().filter(n->n%2==0).toList();
         System.out.println(even);
 
         //2.Count Word Frequency in given String
@@ -25,7 +25,7 @@ public class Java8Programs {
 
         //4.Remove duplicates from a list
         List<Integer> unique=numbers.stream()
-                                    .distinct().collect(Collectors.toList());
+                                    .distinct().toList();
         System.out.println(unique);
 
         //5.Sort Employees by salary using comparator + lambda
@@ -44,7 +44,7 @@ public class Java8Programs {
 
         //6.Convert a list of strings to uppercase in java
         List<String> list=Arrays.asList("Guru","Prasad","Saritha","Raj");
-        list.stream().map(String::toUpperCase).collect(Collectors.toList());
+        list.stream().map(String::toUpperCase).toList();
         System.out.println(list);
 
         //7.Sum All the numbers in list using reduce()
@@ -115,7 +115,7 @@ public class Java8Programs {
         List<Integer> validIntegers = Arrays.stream(strArray)
                 .filter(s -> s.matches("\\d+"))
                 .map(Integer::parseInt)
-                .collect(Collectors.toList());
+                .toList();
         System.out.println(validIntegers);
 
         //18.Find the unique character in String
@@ -126,7 +126,7 @@ public class Java8Programs {
         List<Character> uniqueChars=smap.entrySet().stream()
                 .filter(entry->entry.getValue()==1)
                 .map(Map.Entry::getKey)
-                .collect(Collectors.toList());
+                .toList();
         System.out.println(uniqueChars);
 
         //19. Reverse the String Alphabet order
@@ -135,6 +135,28 @@ public class Java8Programs {
                 .sorted(Comparator.reverseOrder())
                 .collect(Collectors.joining());
         System.out.println(reverse);
+        
+        //20.Find the Odd number and squre them
+        List<Integer> oddSqur=Arrays.asList(1,2,3,4,5);
+        List<Integer> resultoddSqur= oddSqur.stream()
+                .filter(ele->ele%2!=0)
+                .map(ele->ele*ele)
+                .toList();
+        System.out.println(resultoddSqur);
+        
+        //21.In the List find the unique element sort the element in reverse order 
+        List<Integer> revList=Arrays.asList(1,7,4,2,6,3,4,2,5);
+        List<Integer> resultrevList=revList.stream()
+                .distinct()
+                .sorted(Comparator.reverseOrder())
+                .toList();
+        System.out.println(resultrevList);
 
+        //22.Find the 2nd and 3rd element in the list .
+        List<Integer> value=Arrays.asList(1,2,3,4,5);
+        List<Integer>resValue=value.stream().skip(1)
+                .limit(2)
+                .toList();
+        System.out.println(resValue);
     }
 }
