@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -35,7 +36,7 @@ public class Java8Programs {
                 new Employee(8,"Charlie", 90000.00,"Marketing"),
                 new Employee(9,"David", 60000.00,"IT"),
                 new Employee(1, "Amit", 30000.00,"IT"),
-                new Employee(2, "Rahul", 50000.00,"HR"),
+                new Employee(2, "Asha", 50000.00,"HR"),
                 new Employee(3, "Priya", 40000.00,"Admin"),
                 new Employee(4, "Sneha", 60000.00,"IT"),
                 new Employee(5, "Vijay", 20000.00,"HR")
@@ -158,5 +159,23 @@ public class Java8Programs {
                 .limit(2)
                 .toList();
         System.out.println(resValue);
+
+        //23.Find the biggest string in the given list
+        List<String> strings= Arrays.asList("Guru","Prasad","Saritha","Raj");
+        strings.stream()
+                .max(Comparator.comparingInt(String::length))
+                .ifPresent(System.out::println);
+
+        //24.Sort the based on salary then the name for Employee
+        employees.stream()
+                .sorted((emp1,emp2)->{
+                    if(emp1.getSalary()>emp2.getSalary()){
+                        return 1;
+                    }else if(emp1.getSalary()<emp2.getSalary()){
+                        return -1;
+                    }else{
+                        return emp1.getEmpName().compareTo(emp2.getEmpName());
+                    }
+                }).toList().forEach(System.out::println);
     }
 }
