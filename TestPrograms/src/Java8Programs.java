@@ -177,5 +177,17 @@ public class Java8Programs {
                         return emp1.getEmpName().compareTo(emp2.getEmpName());
                     }
                 }).toList().forEach(System.out::println);
+
+        //25.count the employee with each department
+        Map<String, Long> deptCountEmp = employees.stream()
+                .collect(Collectors.groupingBy(ele -> ele.getDepartment(), Collectors.counting()));
+
+        System.out.println(deptCountEmp);
+
+        //26.Average the department salary
+        Map<String, Double> deptSalAvg = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment,
+                        Collectors.averagingDouble(Employee::getSalary)));
+        System.out.println(deptSalAvg);
     }
 }
