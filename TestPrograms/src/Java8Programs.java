@@ -189,5 +189,17 @@ public class Java8Programs {
                 .collect(Collectors.groupingBy(Employee::getDepartment,
                         Collectors.averagingDouble(Employee::getSalary)));
         System.out.println(deptSalAvg);
+
+        //27. Find the Highest salary in every Department
+        Map<String, Optional<Employee>> highSalEachDept = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment,
+                        Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))));
+        System.out.println(highSalEachDept);
+
+        //28.Print the all the employee name with comma separated string
+        String employeeNames = employees.stream()
+                .map(Employee::getEmpName)
+                .collect(Collectors.joining(","));
+        System.out.println(employeeNames);
     }
 }
